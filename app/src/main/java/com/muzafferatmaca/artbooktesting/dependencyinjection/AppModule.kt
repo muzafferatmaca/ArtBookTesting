@@ -2,7 +2,12 @@ package com.muzafferatmaca.artbooktesting.dependencyinjection
 
 import android.content.Context
 import androidx.room.Room
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
+import com.muzafferatmaca.artbooktesting.R
 import com.muzafferatmaca.artbooktesting.api.RetrofitAPI
+import com.muzafferatmaca.artbooktesting.repo.ArtRepository
+import com.muzafferatmaca.artbooktesting.repo.ArtRepositoryInterface
 import com.muzafferatmaca.artbooktesting.roomdb.ArtDao
 import com.muzafferatmaca.artbooktesting.roomdb.ArtDatabase
 import com.muzafferatmaca.artbooktesting.util.Util.BASE_URL
@@ -41,7 +46,7 @@ object AppModule {
             .baseUrl(BASE_URL).build().create(RetrofitAPI::class.java)
     }
 
-    /*
+
     @Singleton
     @Provides
     fun injectNormalRepo(dao : ArtDao, api: RetrofitAPI) = ArtRepository(dao,api) as ArtRepositoryInterface
@@ -55,7 +60,7 @@ object AppModule {
         )
 
 
-     */
+
 
 
 }
